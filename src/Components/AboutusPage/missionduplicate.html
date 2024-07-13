@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rotation</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .rotating-image {
+            width: 300px;
+            height: 300px;
+            /* transition: opacity 2s ease-in-out; */
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img id="rotating-image" class="rotating-image" src="Property 1=Default.png" alt="Image">
+    </div>
+    <script>
+        const images = [
+            'Property 1=Default.png',
+            'Property 1=Variant2.png',
+            'Property 1=Variant3.png',
+            'Property 1=Variant4.png'
+        ];
+
+        let currentIndex = 0;
+        const imageElement = document.getElementById('rotating-image');
+
+        function rotateImages() {
+            imageElement.style.opacity = 0;
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                imageElement.src = images[currentIndex];
+                imageElement.style.opacity = 1;
+
+                setTimeout(rotateImages, 2000); // Change image every 2 seconds (2000 milliseconds)
+            }, 0); // Fade out for 1 second (1000 milliseconds)
+        }
+
+        rotateImages(); // Start the rotation
+    </script>
+</body>
+
+</html>

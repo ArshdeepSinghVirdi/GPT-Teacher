@@ -1,0 +1,155 @@
+/* ..........................First Section................................ */
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes MovingImage1 {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes MovingImage2 {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes MovingImage3 {
+
+    0%,
+    100% {
+        transform: translateY(-80px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes MovingImage4 {
+
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ...............Benefits of Ribin App Section...................... */
+
+.marquee-container {
+    display: flex;
+    animation-name: marquee;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    gap: 10px;
+    /* Adjust animation duration as needed */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-112px * 13));
+    }
+}
+
+/* ........................Ribin for Business Section.............................. */
+
+@keyframes ImgSlide {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ContentSlide {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+/* .................................css................................. */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 33.33333%;
+}
+
+.circle {
+    background-color: #581781;
+    border-radius: 50%;
+    height: 3rem;
+    width: fit-content;
+    padding: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 1rem;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 20px;
+    width: 9vw;
+}
+
+.download {
+    text-align: center;
+    font-size: larger;
+    border-radius: 1.8rem;
+    margin: 2rem 0;
+    margin-bottom: 5rem;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    background-color: #581781;
+    color: white;
+}
+
